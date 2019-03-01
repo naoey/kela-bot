@@ -1,0 +1,14 @@
+{
+  "name": "kela-bot",
+  "version": "0.0.1",
+  "description": "🍌",
+  "main": "index.js",
+  "repository": "https://github.com/naoey/kela-bot",
+  "author": "naoey",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "moment": "^2.24.0"
+  }
+}
