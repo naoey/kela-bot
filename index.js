@@ -32,6 +32,8 @@ function kelafy() {
 }
 
 client.once('ready', () => {
+  console.info('Bot ready');
+
   ossIndia = client.guilds.filter(g => g.id === OSS_INDIA).first();
 
   if (!ossIndia) {
@@ -45,6 +47,10 @@ client.once('ready', () => {
   }
 
   stalkInterval = setInterval(kelafy, 10000);
+});
+
+client.on('disconnect', () => {
+  console.warn('Bot disconnected');
 });
 
 client.on('guildMemberRemove', (m) => {
