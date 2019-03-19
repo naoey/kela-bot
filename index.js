@@ -49,10 +49,6 @@ client.once('ready', () => {
   stalkInterval = setInterval(kelafy, 10000);
 });
 
-client.on('disconnect', () => {
-  console.warn('Bot disconnected');
-});
-
 client.on('guildMemberRemove', (m) => {
   console.log('Untracking member ', m.user.username);
   if (users[m.id]) delete users[m.id];
@@ -64,6 +60,8 @@ client.on('guildMemberAdd', (m) => {
 });
 
 client.on('disconnect', () => {
+  console.warn('Bot disconnected');
+
   if (stalkInterval) clearInterval(stalkInterval);
 
   stalkInterval = null;
