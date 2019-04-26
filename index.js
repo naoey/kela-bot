@@ -22,11 +22,11 @@ function kelafy() {
     if (moment().diff(moment(value), 'days') > 14) {
       let member = ossIndia.members.find(m => m.id === key);
 
-      if (member.nickname === 'kela' || member.user.bot) continue;
+      if (member.nickname === '🍌 kela 🍌 ' || member.user.bot) continue;
 
       console.log(`Member ${member.user.username} last registered/spoke on ${moment(value).calendar()}, kelafying`);
 
-      member.setNickname('kela');
+      member.setNickname('🍌 kela 🍌');
     }
   }
 }
